@@ -1,36 +1,33 @@
-<div class="container-fluid">
-  <ngb-carousel>
-    <ng-template ngbSlide *ngFor="let movie of movies">
-      <img src="{{movie.backdropUrl}}" width="100%" alt="Random first slide">
-      <div class="bottom-bar">
-        <div class="title-container container">
-          <div class="row justify-content-between">
-            <div class="col">
-              <span class="fa fa-play-circle">
-              </span>
-              <span>{{movie.title}}</span>
-            </div>
-            <div class="col-3">
-              <ngb-rating class="star-rating" [(rate)]="movie.averageVote" [starTemplate]="t" [readonly]="true" max="10"></ngb-rating>
-            </div>
+<ngb-carousel>
+  <ng-template ngbSlide *ngFor="let movie of movies">
+    <img src="{{movie.backdropUrl}}" class="carousel-img" alt="Random first slide">
+    <div class="bottom-bar">
+      <div class="title-container container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <span class="fa fa-play-circle">
+            </span>
+            <span>{{movie.title}}</span>
           </div>
-          <div class="row">
-            <h6 class="pb-3"> {{ movie.overview }} </h6>
+          <div class="col-3">
+            <ngb-rating class="star-rating" [(rate)]="movie.averageVote" [starTemplate]="t" [readonly]="true" max="10"></ngb-rating>
           </div>
-
+        </div>
+        <div class="row">
+          <h6 class="pb-3"> {{ movie.overview }} </h6>
         </div>
 
-        <ng-template #t let-fill="fill">
-          <span *ngIf="fill === 100" class="star full">&#9733;</span>
-          <span *ngIf="fill === 0" class="star">&#9733;</span>
-          <span *ngIf="fill < 100 && fill > 0" class="star">
-            <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
-          </span>
-        </ng-template>
       </div>
 
-    </ng-template>
+      <ng-template #t let-fill="fill">
+        <span *ngIf="fill === 100" class="star full">&#9733;</span>
+        <span *ngIf="fill === 0" class="star">&#9733;</span>
+        <span *ngIf="fill < 100 && fill > 0" class="star">
+          <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+        </span>
+      </ng-template>
+    </div>
 
-  </ngb-carousel>
+  </ng-template>
 
-</div>
+</ngb-carousel>

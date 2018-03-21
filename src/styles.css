@@ -15,6 +15,7 @@
   --color-light-black: #222c34;
   --color-light-grey: #f4f4f4;
   --color-light-dark-black: #07131b;
+  --color-white: #fff;
 }
 
 body {
@@ -34,32 +35,70 @@ body {
 .search-input {
   background-color: var(--color-grey--light--2);
   border: none;
-  border-radius: 5rem;
-  width: 18rem;
+  border-radius: 2rem;
+  width: 10rem;
   height: 2.2rem;
-  margin-right: -3rem;
+  /* margin-right: -8rem; */
+  background: transparent;
+  font-family: auto, 'FontAwesome';
 }
+
 .search-input:focus {
   outline: none;
-  width: 22rem;
+  width: 12rem;
   background-color: var(--color-grey--light--2);
   transition: all .2s;
 }
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   font-weight: 100;
   color: var(--color-grey--light--4);
   text-align: center;
 }
+
 .search-button {
   border: none;
-  background-color: var(--color-grey--light--2);
+  background: transparent;
 }
+
 .search-button:focus {
   outline: none;
   background-color: var(--color-grey--light--2);
 }
+
 .search-button:active {
   transform: translateY(2px);
 }
-.search-icon {}
+
+.search-icon {
+  color: var(--color-light-grey);
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7)90%);
+  /* opacity: 0.85; */
+  width: 100%;
+  min-height: 10rem;
+  align-items: right;
+  padding-top: 2rem;
+}
+
+.carousel-item {
+  height: 40rem;
+  background-color: #777;
+}
+
+.carousel-img {
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+
+.carousel-inner {
+  width: 100%;
+  overflow: hidden;
+}
