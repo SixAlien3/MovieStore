@@ -87,6 +87,33 @@ body {
   padding-top: 2rem;
 }
 
+.main-nav-link {
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.7rem;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  border-bottom: 2px solid var(--color-primary);
+  color: #fff
+}
+
+.nav-link {
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s;
+  color: white;
+  letter-spacing: 0.1rem;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  border-bottom: 2px solid var(--color-primary);
+  color: #fff
+}
+
 .carousel-item {
   height: 40rem;
   background-color: #777;
@@ -101,4 +128,48 @@ body {
 .carousel-inner {
   width: 100%;
   overflow: hidden;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.btn-outline-primary {
+  color: var(--color-primary);
+  background-color: transparent;
+  background-image: none;
+  border-color: var(--color-primary);
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:not([disabled]):not(.disabled):active,
+.btn-primary:not([disabled]):not(.disabled).active,
+.show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.2rem var(--color-primary);
+}
+
+.btn-outline-primary:not([disabled]):not(.disabled):active,
+.btn-outline-primary:not([disabled]):not(.disabled).active,
+.show>.btn-outline-primary.dropdown-toggle {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  -webkit-box-shadow: 0 0 0 0.2rem var(--color-primary);
+  box-shadow: 0 0 0 0.2rem var(--color-primary);
 }
