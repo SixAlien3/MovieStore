@@ -87,14 +87,14 @@ body {
   padding-top: 2rem;
 } */
 
-.navbar {
+/* .navbar {
   background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9)100%);
   padding-top: 1rem;
   width: 100%;
   position: absolute;
   z-index: 10;
   top: 0;
-}
+} */
 
 .main-nav-link {
   border-bottom: 2px solid transparent;
@@ -218,5 +218,5 @@ body {
   /* color: var(--color-primary); */
   background-color: var(--color-light-black);
   color: var(--color-white);
-
+  
 }

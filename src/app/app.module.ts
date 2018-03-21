@@ -40,6 +40,7 @@ import { SummaryPipe } from './shared/pipes/summary.pipe';
 import { MovieCardComponent } from './movie/movie-card.component';
 import { LoaderInterceptor } from './shared/interceptors/loader-interceptor';
 import { AnchorHrefDirective } from './shared/directives/anchor-href.directive';
+import { MovieCardSmallComponent } from './movie/movie-card-small.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { AnchorHrefDirective } from './shared/directives/anchor-href.directive';
     OrderSuccessComponent,
     SummaryPipe,
     MovieCardComponent,
-    AnchorHrefDirective
+    AnchorHrefDirective,
+    MovieCardSmallComponent
   ],
   imports: [
     BrowserModule,
