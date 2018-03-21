@@ -1,31 +1,33 @@
 <ngb-carousel>
   <ng-template ngbSlide *ngFor="let movie of movies">
-    <img src="{{movie.backdropUrl}}" class="carousel-img" alt="Random first slide">
+    <img src="{{movie.backdropUrl}}" class="carousel-img" alt="{{movie.title}}">
     <div class="bottom-bar">
       <div class="title-container container">
-        <div class="row justify-content-between">
+        <div class="row">
           <div class="col">
             <span class="fa fa-play-circle">
             </span>
-            <span>{{movie.title}}</span>
+            <span>{{movie.title}}</span> <br>
+            <h6>{{movie.tagline}}</h6> 
           </div>
-          <div class="col-3">
+
+          <!-- <div class="col-3">
             <ngb-rating class="star-rating" [(rate)]="movie.averageVote" [starTemplate]="t" [readonly]="true" max="10"></ngb-rating>
-          </div>
+          </div> -->
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <h6 class="pb-3"> {{ movie.overview }} </h6>
-        </div>
+        </div> -->
 
       </div>
 
-      <ng-template #t let-fill="fill">
+      <!-- <ng-template #t let-fill="fill">
         <span *ngIf="fill === 100" class="star full">&#9733;</span>
         <span *ngIf="fill === 0" class="star">&#9733;</span>
         <span *ngIf="fill < 100 && fill > 0" class="star">
           <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
         </span>
-      </ng-template>
+      </ng-template> -->
     </div>
 
   </ng-template>

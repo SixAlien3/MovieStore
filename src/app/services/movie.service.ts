@@ -27,12 +27,12 @@ export class MovieService {
   }
 
   getMovieDetailsByTmdbId(id: number): Observable<Movie> {
-    return this.apiService.getOne(`${'/movies/details/'}`,id);
-  
+    return this.apiService.getOne(`${'/movies/details/'}`, id);
+
   }
   getMovieandDetailsByTmdbId(id: number) {
       return Observable.forkJoin(
-      this.apiService.getOne(`${'/movies/details/'}`,id)
+      this.apiService.getOne(`${'/movies/details/'}`, id)
     );
   }
   getMovieTrailers(id: number): Observable<Trailer[]> {
