@@ -89,10 +89,10 @@ import { AnchorHrefDirective } from './shared/directives/anchor-href.directive';
       { path: 'ordersuccess', component: OrderSuccessComponent },
       { path: 'my/movies', component: MyMoviesComponent },
 
-      { path: 'admin/books/new', component: AdminMovieFormComponent },
-      { path: 'admin/books/:bookid', component: AdminMovieDetailsComponent },
+      { path: 'admin/movies/new', component: AdminMovieFormComponent },
+      { path: 'admin/movies/:movieid', component: AdminMovieDetailsComponent },
       // { path: 'admin/books/:booktitle/:bookid', component: AdminBookDetailsComponent, canActivate: [AuthGuard, AdminAuthGuard] },
-      { path: 'admin/books', component: AdminMoviesComponent },
+      { path: 'admin/movies', component: AdminMoviesComponent },
       { path: 'admin/orders', component: AdminOrdersComponent },
       { path: '**', component: NotFoundComponent }
     ])
