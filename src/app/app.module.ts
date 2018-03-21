@@ -80,7 +80,7 @@ import { AnchorHrefDirective } from './shared/directives/anchor-href.directive';
       { path: 'movie/:id', component: MovieComponent },
       { path: 'popular', component: MovieCardComponent },
       { path: 'top', component: MovieCardComponent },
-      { path: '  genre/:id', component: MovieCardComponent },
+      { path: 'genre/:id', component: MovieCardComponent },
       { path: 'login', component: LoginComponent },
       { path: 'upcoming', component: MovieCardComponent },
       { path: 'about', component: AboutusComponent },

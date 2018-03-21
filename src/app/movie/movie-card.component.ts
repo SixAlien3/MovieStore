@@ -21,7 +21,7 @@ export class MovieCardComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(
       params => {
-        // console.log(this.route.snapshot.url);
+        console.log(this.route.snapshot.url);
         // console.log(this.route.snapshot.url[0].path);
         this.urlsegmant = this.route.snapshot.url[0].path;
         this.gid = +params.get('id');

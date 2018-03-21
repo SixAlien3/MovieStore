@@ -1,7 +1,7 @@
-<h3 class="site-genre-heading">GENRES</h3>
-<ul class="side-nav">
+
+<ul>
   <li *ngFor="let genre of genres" >
-      <a href="#"  [routerLink]="['/genre/', genre.id ]"  class="side-nav-link-genre" routerLinkActive="side-nav-active-genre">
+      <a href="#" class="dropdown-item"  [routerLink]="['/genre/', genre.id ]">
           {{genre.name}}
       </a>
   </li>

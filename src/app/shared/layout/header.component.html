@@ -18,7 +18,16 @@
           </a>
         </li>
         <li class="nav-item mr-5">
-          <a class="nav-link" href="#">Genres</a>
+          <div ngbDropdown >
+            <a class="nav-link" style="color: white;" ngbDropdownToggle>Genres</a>
+            <div ngbDropdownMenu aria-labelledby="dropdownManual">
+              <!-- <a class="dropdown-item">Logout</a>
+              <a class="dropdown-item">My Movies</a>
+              <a class="dropdown-item">My Account</a> -->
+              <app-genre></app-genre>
+            </div>
+          </div>
+
         </li>
         <li>
           <a class="btn btn-outline-primary mr-5" href="#">Login</a>
@@ -27,14 +36,14 @@
           <a class="btn btn-primary mr-5" href="#">Signup</a>
         </li>
         <li>
-            <form>
-                <input class="search-input" placeholder="&#xF002;" type="text"  aria-label="Search">
-                <!-- <i class="fas fa-search search-icon"></i> -->
-              </form>
+          <form>
+            <input class="search-input" placeholder="&#xF002;" type="text" aria-label="Search">
+            <!-- <i class="fas fa-search search-icon"></i> -->
+          </form>
         </li>
       </ul>
       <ul class="nav navbar-nav">
-     
+
       </ul>
     </div>
 
