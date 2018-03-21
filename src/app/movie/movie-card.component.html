@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row no-gutters">
+    <ng-container *ngFor="let movie of movies let i = index">
+      <div class="card col-4">
+        <div class="card-header">
+          <a [routerLink]="['/movie/', movie.externalId ]">
+            <img class="card-img" src={{movie.posterUrl}} alt="Card image">
+          </a>
+
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">{{movie.title}}
+            <span class="label-year border-orange-red">
+              {{movie.releaseDate | date:'yyyy'}}
+
+            </span>
+          </h3>
+          <div class="container">
+            <div class="row">
+              <div class="col-3 metadata">
+                <!-- <i class="fa fa-star" aria-hidden="true"></i> -->
+                <h4>
+                  <span class="badge badge-secondary"> {{movie.averageVote}}</span>
+                </h4>
+              </div>
+              <div class="col metadata">
+                <ng-container *ngFor="let g of movie.genres">
+                  <a href="#" [routerLink]="['/genre/', g.id ]" class="badge badge-pill badge-light-primary"> {{g.name}}</a>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+          <h5 class="mt-4">
+            {{movie.tagline }}
+          </h5>
+          <a class="trailer-preview" href="{{movie.imdbId}}" appAnchorHref [attr.data-tmdbid]="movie.externalId" target="new">
+            <i [ngClass]="{'fab fa-imdb':movie.imdbId, 'fa fa-play': movie.imdbId == null }" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+    </ng-container>
+
+  </div>
+</div>
