@@ -32,11 +32,11 @@
 <div class="container-fluid mt-5 div-second-color">
   <div class="row ">
     <div class="col-sm">
-      <ngb-tabset #mtab="ngbTabset" (tabChange)="selectedTab(mtab)">
+      <ngb-tabset #mtab="ngbTabset" [activeId]="mtab" (tabChange)="selectedTab($event)">
         <ngb-tab title="IN THEATERS" id="theatertab">
           <ng-template ngbTabContent>
             <div class="row mt-5">
-              <div class="col-sm" *ngFor="let m of movies2">
+              <div class="col-sm" *ngFor="let m of tabMovies">
                 <div class="feature-box main-img">
                   <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
                   <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
@@ -50,7 +50,7 @@
         <ngb-tab title="COMING SOON" id="comingSoontab">
           <ng-template ngbTabContent>
             <div class="row mt-5">
-              <div class="col-sm" *ngFor="let m of movies2">
+              <div class="col-sm" *ngFor="let m of tabMovies">
                 <div class="feature-box main-img ">
                   <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
                   <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
@@ -64,7 +64,7 @@
         <ngb-tab title="NEW TRAILERS" id="newTrailerstab">
           <ng-template ngbTabContent>
             <div class="row mt-5">
-              <div class="col-sm" *ngFor="let m of movies2">
+              <div class="col-sm" *ngFor="let m of tabMovies">
                 <div class="feature-box main-img ">
                   <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
                   <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
@@ -78,7 +78,7 @@
         <ngb-tab title="TOP RATED" id="topRatedtab">
           <ng-template ngbTabContent>
             <div class="row mt-5">
-              <div class="col-sm" *ngFor="let m of movies2">
+              <div class="col-sm" *ngFor="let m of tabMovies">
                 <div class="feature-box main-img ">
                   <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
                   <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
@@ -90,7 +90,7 @@
         <ngb-tab title="MOST POPULAR" id="populartab">
           <ng-template ngbTabContent>
             <div class="row mt-5">
-              <div class="col-sm" *ngFor="let m of movies2">
+              <div class="col-sm" *ngFor="let m of tabMovies">
                 <div class="feature-box main-img ">
                   <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
                   <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
