@@ -40,14 +40,14 @@
 </div>
 
 <div class="container-fluid mt-5">
-  <div class="row">
-    <div class="col-sm">
+  <div class="row ">
+    <div class="col-sm tabbable-line">
       <ngb-tabset>
         <ngb-tab title="IN THEATERS">
           <ng-template ngbTabContent>
-            <div class="row">
+            <div class="row mt-5">
               <div class="col-sm" *ngFor="let m of movies2">
-                <div class="feature-box main-img ">
+                <div class="feature-box main-img">
                   <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
                   <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
 
@@ -59,7 +59,7 @@
         </ngb-tab>
         <ngb-tab title="COMING SOON">
           <ng-template ngbTabContent>
-            <div class="row">
+            <div class="row mt-5">
               <div class="col-sm" *ngFor="let m of movies2">
                 <div class="feature-box main-img ">
                   <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
@@ -73,7 +73,7 @@
         </ngb-tab>
         <ngb-tab title="NEW TRAILERS">
           <ng-template ngbTabContent>
-            <div class="row">
+            <div class="row mt-5">
               <div class="col-sm" *ngFor="let m of movies2">
                 <div class="feature-box main-img ">
                   <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
@@ -87,7 +87,7 @@
         </ngb-tab>
         <ngb-tab title="TOP RATED">
           <ng-template ngbTabContent>
-            <div class="row">
+            <div class="row mt-5">
               <div class="col-sm" *ngFor="let m of movies2">
                 <div class="feature-box main-img ">
                   <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
@@ -99,7 +99,7 @@
         </ngb-tab>
         <ngb-tab title="MOST POPULAR">
           <ng-template ngbTabContent>
-            <div class="row">
+            <div class="row mt-5">
               <div class="col-sm" *ngFor="let m of movies2">
                 <div class="feature-box main-img ">
                   <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
