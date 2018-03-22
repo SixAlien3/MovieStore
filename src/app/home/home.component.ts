@@ -21,14 +21,20 @@ export class HomeComponent implements OnInit {
   constructor(private movieService: MovieService) { }
 
   ngAfterViewInit() {
-    console.log('Tab Initialized');
-    console.log(this.tabSet);
+    // console.log('Tab Initialized');
+    // console.log(this.tabSet);
     this.movieService.getNowPlayingMovies()
       .subscribe(
         m => {
-          this.tabMovies = m.slice(0, 6);
+          this.tabMovies = m;
+          console.log(this.movies);
         }
       );
+  }
+
+  showMore(x) {
+    console.log('Show More Clicked');
+    console.log(x);
   }
 
   selectedTab(tab: NgbTabChangeEvent) {
@@ -41,7 +47,7 @@ export class HomeComponent implements OnInit {
         this.movieService.getUpComingMovies()
           .subscribe(
             m => {
-              this.tabMovies = m.slice(0, 6);
+              this.tabMovies = m;
             }
           );
         break;
@@ -50,7 +56,7 @@ export class HomeComponent implements OnInit {
         this.movieService.getNowPlayingMovies()
           .subscribe(
             m => {
-              this.tabMovies = m.slice(0, 6);
+              this.tabMovies = m;
             }
           );
         break;
@@ -59,7 +65,7 @@ export class HomeComponent implements OnInit {
         this.movieService.getTopMovies()
           .subscribe(
             m => {
-              this.tabMovies = m.slice(0, 6);
+              this.tabMovies = m;
             }
           );
         break;
@@ -68,7 +74,7 @@ export class HomeComponent implements OnInit {
         this.movieService.getMostPopularMovies()
           .subscribe(
             m => {
-              this.tabMovies = m.slice(0, 6);
+              this.tabMovies = m;
             }
           );
         break;
@@ -77,7 +83,7 @@ export class HomeComponent implements OnInit {
         this.movieService.getNowPlayingMovies()
           .subscribe(
             m => {
-              this.tabMovies = m.slice(0, 6);
+              this.tabMovies = m;
             }
           );
         break;
@@ -94,8 +100,8 @@ export class HomeComponent implements OnInit {
     this.movieService.getNowPlayingMovies()
       .subscribe(
         m => {
-          this.movies = m.slice(0, 6);
-          this.movies2 = m.slice(6, 12);
+          this.movies = m
+          // this.movies2 = m.slice(6, 12);
         }
       );
   }

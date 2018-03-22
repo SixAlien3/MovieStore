@@ -1,5 +1,5 @@
 <ngb-carousel>
-  <ng-template ngbSlide *ngFor="let movie of movies">
+  <ng-template ngbSlide *ngFor="let movie of movies | slice:0:6">
     <div class="container-FLUID">
       <img src="{{movie.backdropUrl}}" class="carousel-img img-fluid" alt="{{movie.title}}">
 
@@ -17,7 +17,7 @@
 
 <div class="container-fluid div-first-color">
   <div class="row move-up">
-    <div class="col-sm" *ngFor="let m of movies2">
+    <div class="col-sm" *ngFor="let m of movies | slice:6:12">
       <div class="feature-box main-img ">
         <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
         <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
@@ -40,9 +40,7 @@
                 <div class="feature-box main-img">
                   <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
                   <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
-
                 </div>
-
               </div>
             </div>
           </ng-template>
@@ -102,8 +100,9 @@
           </ng-template>
         </ngb-tab>
       </ngb-tabset>
-
+      <div class="mx-auto" style="width: 200px;">
+       <a name="" id="" [routerLink]="" class="btn btn-primary" (click)="showMore(mtab)"  role="button">Show More</a>
+      </div>
     </div>
 
   </div>
-</div>
