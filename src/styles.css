@@ -271,3 +271,12 @@ body {
   border: none;
   margin: 0px;
 }
+
+.limheight {
+  column-count: 2;
+}
+
+.limheight li {
+  display: inline-block;
+  /*necessary*/
+}

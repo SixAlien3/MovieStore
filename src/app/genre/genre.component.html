@@ -1,4 +1,4 @@
-<ul style="list-style-type: none; display:inline;">
+<ul class="limheight" style="list-style-type: none; display:inline-block;">
   <li *ngFor="let genre of genres" >
     <a href="#" class="dropdown-item" [routerLink]="['/genre/', genre.id ]">
       {{genre.name}}
