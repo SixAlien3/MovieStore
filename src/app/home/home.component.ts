@@ -9,13 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   movies: Movie[];
+  movies2: Movie[];
   constructor(private movieService: MovieService) { }
 
   ngOnInit() {
     this.movieService.getNowPlayingMovies()
       .subscribe(
         m => {
-          this.movies = m;
+          this.movies = m.slice(0, 6);
+          this.movies2 = m.slice(6, 12);
         }
       );
   }
