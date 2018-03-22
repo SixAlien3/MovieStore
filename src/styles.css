@@ -114,7 +114,9 @@ body {
   border-bottom: 1px solid transparent;
   transition: border-bottom 0.2s;
   color: white;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.15rem;
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
 }
 
 .nav-link:hover,
