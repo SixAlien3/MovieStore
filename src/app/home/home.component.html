@@ -15,7 +15,7 @@
 
 </ngb-carousel>
 
-<div class="container-fluid" class="div-first-color">
+<div class="container-fluid div-first-color">
   <div class="row move-up">
     <div class="col-sm" *ngFor="let m of movies2">
       <div class="feature-box main-img ">
@@ -29,11 +29,11 @@
   </div>
 </div>
 
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-5 div-second-color">
   <div class="row ">
-    <div class="col-sm tabbable-line">
-      <ngb-tabset>
-        <ngb-tab title="IN THEATERS">
+    <div class="col-sm">
+      <ngb-tabset #mtab="ngbTabset" (tabChange)="selectedTab(mtab)">
+        <ngb-tab title="IN THEATERS" id="theatertab">
           <ng-template ngbTabContent>
             <div class="row mt-5">
               <div class="col-sm" *ngFor="let m of movies2">
@@ -47,7 +47,7 @@
             </div>
           </ng-template>
         </ngb-tab>
-        <ngb-tab title="COMING SOON">
+        <ngb-tab title="COMING SOON" id="comingSoontab">
           <ng-template ngbTabContent>
             <div class="row mt-5">
               <div class="col-sm" *ngFor="let m of movies2">
@@ -61,7 +61,7 @@
             </div>
           </ng-template>
         </ngb-tab>
-        <ngb-tab title="NEW TRAILERS">
+        <ngb-tab title="NEW TRAILERS" id="newTrailerstab">
           <ng-template ngbTabContent>
             <div class="row mt-5">
               <div class="col-sm" *ngFor="let m of movies2">
@@ -75,7 +75,7 @@
             </div>
           </ng-template>
         </ngb-tab>
-        <ngb-tab title="TOP RATED">
+        <ngb-tab title="TOP RATED" id="topRatedtab">
           <ng-template ngbTabContent>
             <div class="row mt-5">
               <div class="col-sm" *ngFor="let m of movies2">
@@ -87,7 +87,7 @@
             </div>
           </ng-template>
         </ngb-tab>
-        <ngb-tab title="MOST POPULAR">
+        <ngb-tab title="MOST POPULAR" id="populartab">
           <ng-template ngbTabContent>
             <div class="row mt-5">
               <div class="col-sm" *ngFor="let m of movies2">

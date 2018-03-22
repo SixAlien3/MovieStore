@@ -116,7 +116,7 @@ body {
   color: white;
   letter-spacing: 0.15rem;
   text-rendering: optimizeLegibility;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .nav-link:hover,
@@ -276,12 +276,9 @@ body {
 .div-first-color {
   background-color: var(--color-light-dark-black);
 }
-
-.nav-tabs {
-  border: none;
-  margin: 0px;
+.div-second-color {
+  background-color: var(--color-grey--light--);
 }
-
 .limheight {
   column-count: 2;
 }
@@ -289,4 +286,21 @@ body {
 .limheight li {
   display: inline-block;
   /*necessary*/
+}
+
+
+.nav-tabs>li.nav-item {
+  margin-right: 8rem;
+}
+.nav-tabs>li.nav-item>a,
+.nav-tabs>li.nav-item>a:focus,
+.nav-tabs>li.nav-item>a:hover {
+  border-width: 0;
+  background-color: none;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: var(--color-primary);
+  background-color: transparent;
 }
