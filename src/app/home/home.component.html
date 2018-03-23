@@ -17,7 +17,7 @@
 
 <div class="container-fluid div-first-color">
   <div class="row move-up">
-    <div class="col-sm" *ngFor="let m of movies | slice:6:12">
+    <div class="col-2" *ngFor="let m of movies | slice:6:12">
       <div class="feature-box main-img ">
         <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
         <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
@@ -37,7 +37,7 @@
           <ng-template ngbTabContent>
             <div class="row mt-5">
               <ng-container *ngFor="let m of tabMovies; let i = index">
-                <div class="col-2">
+                <div class="col-sm-2">
                   <div class="feature-box main-img">
                     <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
                     <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
