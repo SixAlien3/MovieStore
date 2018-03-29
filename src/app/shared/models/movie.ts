@@ -5,6 +5,7 @@ export class Movie {
     id: number;
     title: string;
     posterUrl: string;
+    budget: number;
     revenue: number;
     imdbId: string;
     releaseDate: string;
@@ -13,6 +14,7 @@ export class Movie {
     tagline: string;
     backdropUrl: string;
     externalId: number;
+    runTime: number;
     genres: Genre[];
     trailers: Trailer[];
 }

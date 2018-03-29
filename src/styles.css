@@ -314,7 +314,7 @@ body {
   /* background:linear-gradient(0deg,rgba(255,0,150,0.3),rgba(255,0,150,0.3)),url(http://lorempixel.com/800/600/nature/2); */
   /* opacity: .5; */
   /* background-color: var(--color-grey--dark--3); */
-  background-blend-mode:overlay;
+  background-blend-mode: overlay;
   /* background-image: radial-gradient(circle at 20% 50%, rgba(13.73%, 18.04%, 14.90%, 0.98) 0%, rgba(13.73%, 18.04%, 14.90%, 0.88) 100%); */
 }
 
@@ -327,3 +327,16 @@ body {
   bottom: 0;
   background: rgba(0,0,0,0.6);
 } */
+
+.badge-light-primary,
+.badge-light-primary:hover {
+  color: white;
+  background-color: var(--color-primary-dark);
+  /* font-size: 0.8rem; */
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}

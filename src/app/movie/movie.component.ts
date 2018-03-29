@@ -24,8 +24,8 @@ export class MovieComponent implements OnInit {
         if (this.id > 0) {
           this.movieService.getMovieDetailsByTmdbId(this.id)
             .subscribe(
-              g => {
-                this.movie = g;
+              m => {
+                this.movie = m;
                 console.table(this.movie);
               }
             );
