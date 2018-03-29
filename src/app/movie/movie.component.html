@@ -12,30 +12,30 @@
     </div>
     <div class="col-8">
       <div class="row">
-        <div class="col-12">
-          <h2 class="heading-tertiary">
+        <div class="col-12 mt-2">
+          <h2 class="text-light">
             {{movie?.title}}
           </h2>
         </div>
 
-        <div class="col-12 text-secondary">
-          {{movie.runTime}} m | {{movie.releaseDate}}
+        <div class="col-3 text-secondary mt-2">
+          {{movie?.runTime}} m | {{movie?.releaseDate}}
         </div>
-        <div class="col-12">
-          <ng-container *ngFor="let g of movie.genres">
+        <div class="col mt-2">
+          <ng-container *ngFor="let g of movie?.genres">
             <a href="#" [routerLink]="['/genre/', g.id ]" class="badge badge-pill badge-light-primary"> {{g.name}}</a>
           </ng-container>
 
         </div>
-        <div class="col-12">
+        <div class="col-12 mt-4">
           <h4>
             <span class="badge badge-secondary">
-              {{movie.averageVote}}
+              {{movie?.averageVote}}
             </span>
           </h4>
         </div>
-        <div  class="col-12">
-          {{movie.overview}}
+        <div  class="col-12 text-light mt-2">
+          {{movie?.overview}}
         </div>
 
       </div>
