@@ -26,7 +26,7 @@ export class MovieComponent implements OnInit {
             .subscribe(
               g => {
                 this.movie = g;
-               
+                console.table(this.movie);
               }
             );
         }

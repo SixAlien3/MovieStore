@@ -1,15 +1,16 @@
-<div class="container-fluid  bg-image" [style.backgroundImage]="'url('+ movie.backdropUrl +')'">
-
-  <div class="container">
+<div class="container-fluid  bg-image" [style.backgroundImage]="'url('+ movie?.backdropUrl +')'">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-8">
-        .col-8
+      <div class="col-3">
+        <div class="card-header">
+          <img class="card-img" src={{movie?.posterUrl}} alt="Card image">
+        </div>
         <div class="row">
           <div class="col-6">.col-6</div>
           <div class="col-6">.col-6</div>
         </div>
       </div>
-      <div class="col-4">.col-4</div>
+      <div class="col-8">Movie Details</div>
 
     </div>
   </div>
