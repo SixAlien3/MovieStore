@@ -346,7 +346,11 @@ body {
   color: var(--color-primary);
 }
 
-hr {
+.hr-2 {
   border-color: var(--color-primary-dark);
   border-width: .2rem;
+}
+.hr-light-1 {
+  border-color: var(--color-grey--dark--3);
+  border-width: .1rem;
 }

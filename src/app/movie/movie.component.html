@@ -39,9 +39,31 @@
         </div>
 
       </div>
-      <hr>
+      <hr class="hr-2">
+      <div class="row">
+        <div class="col-10">
+          <h5 class="text-light text-uppercase">Cast</h5>
+
+        </div>
+        <div class="col">
+          <a href="#" [routerLink]="['/movie/cast/', movie?.id ]" class="secondary-anchor text-uppercase align-content-end "> See all </a>
+        </div>
+      </div>
+      <!-- <hr class="hr-light-1"> -->
+      <div class="row">
+        <div class="card mr-2" style="width: 10rem;" *ngFor="let c of credits?.cast?.slice(0,5)">
+          <ng-container>
+            <img class="card-img-top" src={{c?.profilePath}} alt="{{c?.profilePath}}">
+            <!-- <div class="card-body">
+              <p class="card-text">
+                {{c.name}}
+              </p>
+            </div> -->
+          </ng-container>
+        </div>
+      </div>
     </div>
-    
+
     <div class="col-2">
       <!-- Place for Director, Writer and Story etc Credits -->
       <div class="row">
