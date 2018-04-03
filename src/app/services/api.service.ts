@@ -25,7 +25,7 @@ export class ApiService {
       .catch(this.handleError);
 
   }
-  create(path: string, resource:Object = {}) : Observable<any> {
+  create(path: string, resource:Object = {}): Observable<any> {
     return this.http.post(`${environment.api_url}${path}`, JSON.stringify(resource))
       .map(response => response)
       .catch(this.handleError);

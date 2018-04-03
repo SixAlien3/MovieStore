@@ -1,8 +1,9 @@
 <ngb-carousel>
   <ng-template ngbSlide *ngFor="let movie of movies | slice:0:6">
     <div class="container-FLUID">
-      <img src="{{movie.backdropUrl}}" class="carousel-img img-fluid" alt="{{movie.title}}">
-
+      <a [routerLink]="['/movie/', movie.externalId ]">
+        <img src="{{movie.backdropUrl}}" class="carousel-img img-fluid" alt="{{movie.title}}">
+      </a>
     </div>
     <div class="bottom-bar">
       <div class="title-container">
@@ -19,9 +20,10 @@
   <div class="row move-up">
     <div class="col-2" *ngFor="let m of movies | slice:6:12">
       <div class="feature-box main-img ">
-        <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
+        <a [routerLink]="['/movie/', m.externalId ]">
+          <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
+        </a>
         <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
-
       </div>
 
     </div>
@@ -39,7 +41,10 @@
               <ng-container *ngFor="let m of tabMovies; let i = index">
                 <div class="col-sm-2">
                   <div class="feature-box main-img">
-                    <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
+                    <a [routerLink]="['/movie/', m.externalId ]">
+
+                      <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
+                    </a>
                     <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
                   </div>
                 </div>
@@ -56,7 +61,9 @@
             <div class="row mt-5">
               <div class="col-2" *ngFor="let m of tabMovies">
                 <div class="feature-box main-img ">
-                  <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
+                  <a [routerLink]="['/movie/', m.externalId ]">
+                    <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
+                  </a>
                   <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
                 </div>
               </div>
@@ -71,7 +78,9 @@
             <div class="row mt-5">
               <div class="col-2" *ngFor="let m of tabMovies">
                 <div class="feature-box main-img ">
-                  <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
+                  <a [routerLink]="['/movie/', m.externalId ]">
+                    <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
+                  </a>
                   <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
 
                 </div>
@@ -88,7 +97,9 @@
             <div class="row mt-5">
               <div class="col-2" *ngFor="let m of tabMovies">
                 <div class="feature-box main-img ">
-                  <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
+                  <a [routerLink]="['/movie/', m.externalId ]">
+                    <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
+                  </a>
                   <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
                 </div>
               </div>
@@ -103,7 +114,9 @@
             <div class="row mt-5">
               <div class="col-2" *ngFor="let m of tabMovies">
                 <div class="feature-box main-img ">
-                  <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
+                  <a [routerLink]="['/movie/', m.externalId ]">
+                    <img src="{{m.posterUrl}}" class="mini-movie-img" alt="{{m.title}}">
+                  </a>
                   <h6 class="heading-tertiary u-margin-bottom-small">{{m.title}}</h6>
 
                 </div>
