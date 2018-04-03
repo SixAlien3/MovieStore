@@ -41,6 +41,7 @@ import { MovieCardComponent } from './movie/movie-card.component';
 import { LoaderInterceptor } from './shared/interceptors/loader-interceptor';
 import { AnchorHrefDirective } from './shared/directives/anchor-href.directive';
 import { MovieCardSmallComponent } from './movie/movie-card-small.component';
+import { PeopleComponent } from './people/people.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { MovieCardSmallComponent } from './movie/movie-card-small.component';
     SummaryPipe,
     MovieCardComponent,
     AnchorHrefDirective,
-    MovieCardSmallComponent
+    MovieCardSmallComponent,
+    PeopleComponent
   ],
   imports: [
     BrowserModule,
@@ -80,6 +82,8 @@ import { MovieCardSmallComponent } from './movie/movie-card-small.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'movie/:id', component: MovieComponent },
+      { path: 'person/:id', component: PeopleComponent },
+      { path: 'movie/cast/:id', component: MoviesFilterComponent },
       { path: 'popular', component: MovieCardComponent },
       { path: 'top', component: MovieCardComponent },
       { path: 'genre/:id', component: MovieCardComponent },

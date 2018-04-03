@@ -10,20 +10,20 @@
         <div class="col-6">.col-6</div>
       </div>
     </div>
-    <div class="col-8">
+    <div class="col-7">
       <div class="row">
         <div class="col-12 mt-2">
-          <h2 class="text-light">
+          <h2 class="text-light movie-title text-uppercase">
             {{movie?.title}}
           </h2>
         </div>
 
-        <div class="col-3 text-secondary mt-2">
+        <div class="col-4 text-secondary font-weight-bold mt-2">
           {{movie?.runTime}} m | {{movie?.releaseDate}}
         </div>
         <div class="col mt-2">
           <ng-container *ngFor="let g of movie?.genres">
-            <a href="#" [routerLink]="['/genre/', g.id ]" class="badge badge-pill badge-light-primary"> {{g.name}}</a>
+            <a href="#" [routerLink]="['/genre/', g?.id ]" class="badge badge-light-primary"> {{g.name}}</a>
           </ng-container>
 
         </div>
@@ -34,16 +34,51 @@
             </span>
           </h3>
         </div>
-        <div  class="col-12 text-light mt-2">
+        <div class="col-12 text-light mt-2">
           {{movie?.overview}}
         </div>
 
       </div>
-
-
-
+      <hr>
     </div>
+    
+    <div class="col-2">
+      <!-- Place for Director, Writer and Story etc Credits -->
+      <div class="row">
+        <div class="mt-5 text-light">
+          <div class="mt-3">
+            <h6 class="text-uppercase text-secondary">Director</h6>
+            <h6 *ngFor="let d of credits?.crew">
+              <ng-container *ngIf="d.job ==='Director'">
+                <a href="#" [routerLink]="['/person/', d?.id ]" class="primary-anchor"> {{d.name}}</a>
+              </ng-container>
+            </h6>
+          </div>
 
+          <div class="mt-3">
+            <h6 class="text-uppercase text-secondary">Writer</h6>
+            <h6 *ngFor="let d of credits?.crew">
+              <ng-container *ngIf=" d.job === 'Screenplay' || d.job === 'Writer' ">
+                <a href="#" [routerLink]="['/person/', d?.id ]" class="primary-anchor"> {{d.name}}</a>
+              </ng-container>
+            </h6>
+
+          </div>
+
+          <div class="mt-3">
+            <h6 class="text-uppercase text-secondary">Stars</h6>
+            <h6 *ngFor="let c of credits?.cast?.slice(0,5)">
+              <ng-container>
+                <a href="#" [routerLink]="['/person/', c?.id ]" class="primary-anchor"> {{c.name}}</a>
+              </ng-container>
+            </h6>
+          </div>
+          <div class="mt-3">
+            <a href="#" [routerLink]="['/movie/cast/', movie?.id ]" class="secondary-anchor small"> Full Cast & Crew </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -21,8 +21,8 @@ export class MovieComponent implements OnInit {
 
     this.route.paramMap.subscribe(
       params => {
-      //  console.log(this.route.snapshot.url);
-      this.id = +params.get('id');
+        //  console.log(this.route.snapshot.url);
+        this.id = +params.get('id');
         if (this.id > 0) {
 
           this.movieService.getMovieDetailsByTmdbId(this.id)
@@ -37,8 +37,8 @@ export class MovieComponent implements OnInit {
             .subscribe(
               m => {
                 this.credits = m;
-                console.table(this.credits.cast);
-                console.table(this.credits.crew);
+                // console.table(this.credits.cast);
+                // console.table(this.credits.crew);
               }
             );
 
