@@ -339,10 +339,13 @@ body {
   font-weight: bolder;
 }
 
-.primary-anchor, .primary-anchor:hover {
+.primary-anchor,
+.primary-anchor:hover {
   color: var(--color-primary-light);
 }
-.secondary-anchor, .secondary-anchor:hover {
+
+.secondary-anchor,
+.secondary-anchor:hover {
   color: var(--color-primary);
 }
 
@@ -350,7 +353,27 @@ body {
   border-color: var(--color-primary-dark);
   border-width: .2rem;
 }
+
 .hr-light-1 {
   border-color: var(--color-grey--dark--3);
   border-width: .1rem;
+}
+
+.card-cast {
+  border: none;
+  /* border-radius: 5rem; */
+  background-color: transparent;
+}
+
+.text-secondary-color {
+  color: var(--color-grey--light--4);
+}
+
+.list-group-item {
+  background-color: transparent;
+  color: var(--color-grey--light--2);
+  border: 1px solid var(--color-primary);
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
 }

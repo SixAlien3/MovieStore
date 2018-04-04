@@ -2,12 +2,20 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-3">
-      <div class="card-header">
+      <div class=" row card-header">
         <img class="card-img" src={{movie?.posterUrl}} alt="Card image">
       </div>
-      <div class="row">
-        <div class="col-6">.col-6</div>
-        <div class="col-6">.col-6</div>
+      <div class="row ">
+        <div class="col">
+          <h5 class="text-secondary-color">Movie Data</h5>
+          <ul class="list-group">
+            <li class="list-group-item">Status <span>{{movie.releaseDate}}</span>  </li>
+            <li class="list-group-item">Box Office {{movie.revenue | currency }} </li>
+            <li class="list-group-item">Budget {{movie.budget | currency}} </li>
+            <li class="list-group-item">Imdb <a href="{{movie.imdbId}}" target="_blank"> IMDB</a>  </li>
+            <li class="list-group-item">Companies</li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="col-7">
@@ -23,9 +31,8 @@
         </div>
         <div class="col mt-2">
           <ng-container *ngFor="let g of movie?.genres">
-            <a href="#" [routerLink]="['/genre/', g?.id ]" class="badge badge-light-primary"> {{g.name}}</a>
+            <a href="#" *ngIf="g" [routerLink]="['/genre/', g?.id ]" class="badge badge-light-primary"> {{g?.name}}</a>
           </ng-container>
-
         </div>
         <div class="col-12 mt-4">
           <h3>
@@ -51,14 +58,18 @@
       </div>
       <!-- <hr class="hr-light-1"> -->
       <div class="row">
-        <div class="card mr-2" style="width: 10rem;" *ngFor="let c of credits?.cast?.slice(0,5)">
+        <div class="card card-cast mr-2" style="width: 10rem;" *ngFor="let c of credits?.cast?.slice(0,5)">
           <ng-container>
-            <img class="card-img-top" src={{c?.profilePath}} alt="{{c?.profilePath}}">
-            <!-- <div class="card-body">
-              <p class="card-text">
-                {{c.name}}
-              </p>
-            </div> -->
+            <a href="#" [routerLink]="['/person/', c?.id ]" class="primary-anchor">
+              <img class="card-img " src={{c?.profilePath}} alt="{{c?.name}}">
+            </a>
+            <div class="card-body">
+              <h6 class="card-title">
+                <a href="#" [routerLink]="['/person/', c?.id ]" class="primary-anchor"> {{c.name}}</a>
+              </h6>
+
+            </div>
+
           </ng-container>
         </div>
       </div>
