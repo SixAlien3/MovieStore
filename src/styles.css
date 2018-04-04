@@ -313,7 +313,7 @@ body {
   background-size: cover;
   /* background:linear-gradient(0deg,rgba(255,0,150,0.3),rgba(255,0,150,0.3)),url(http://lorempixel.com/800/600/nature/2); */
   /* opacity: .5; */
-  /* background-color: var(--color-grey--dark--3); */
+  background-color: var(--color-light-dark-black);
   background-blend-mode: overlay;
   /* background-image: radial-gradient(circle at 20% 50%, rgba(13.73%, 18.04%, 14.90%, 0.98) 0%, rgba(13.73%, 18.04%, 14.90%, 0.88) 100%); */
 }
@@ -361,7 +361,6 @@ body {
 
 .card-cast {
   border: none;
-  /* border-radius: 5rem; */
   background-color: transparent;
 }
 
@@ -377,3 +376,4 @@ body {
   border-right: 0;
   border-top: 0;
 }
+
