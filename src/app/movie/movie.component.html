@@ -7,13 +7,29 @@
       </div>
       <div class="row ">
         <div class="col">
-          <h5 class="text-secondary-color">Movie Data</h5>
+          <!-- <h5 class="text-secondary-color">Movie Data</h5> -->
           <ul class="list-group">
-            <li class="list-group-item">Status <span>{{movie.releaseDate}}</span>  </li>
-            <li class="list-group-item">Box Office {{movie.revenue | currency }} </li>
-            <li class="list-group-item">Budget {{movie.budget | currency}} </li>
-            <li class="list-group-item">Imdb <a href="{{movie.imdbId}}" target="_blank"> IMDB</a>  </li>
-            <li class="list-group-item">Companies</li>
+            <li class="list-group-item">
+              <i class="far fa-calendar-alt mr-2"></i>Release Date
+              <span class="badge badge-light-primary">{{movie.releaseDate}}</span>
+            </li>
+            <li class="list-group-item">
+                <i class="fas fa-hourglass-half mr-2"></i>Run Time
+              <span class="badge badge-light-primary">{{movie.runTime}} m</span>
+            </li>
+            <li class="list-group-item">
+                <i class="far fa-money-bill-alt"></i> Box Office
+              <span class="badge badge-light-primary"> {{movie.revenue | currency }}</span>
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-dollar-sign mr-2"></i> Budget
+              <span class="badge badge-light-primary"> {{movie.budget | currency}}</span>
+            </li>
+            <li *ngIf="movie.homepage" class="list-group-item">
+                <i class="fas fa-share-square mr-2"></i>Home Page
+              <a href="{{movie.homepage}}" class="primary-anchor" target="_blank"> {{movie.title}} </a>
+            </li>
+
           </ul>
         </div>
       </div>

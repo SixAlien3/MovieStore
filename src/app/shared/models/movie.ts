@@ -8,6 +8,7 @@ export class Movie {
     budget: number;
     revenue: number;
     imdbId: string;
+    homepage: string;
     releaseDate: string;
     averageVote: number;
     overview: string;
