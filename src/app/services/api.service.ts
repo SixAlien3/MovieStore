@@ -44,9 +44,8 @@ export class ApiService {
 
   private handleError(error: Response) {
     if (error.status === 400) { return Observable.throw(new BadInputError(error.json())); }
-
     if (error.status === 404) { return Observable.throw(new NotFoundError()); }
-
+    if (error.status === 500) { return Observable.throw(new AppError()); }
     return Observable.throw(new AppError(error));
   }
 }
