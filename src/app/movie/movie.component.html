@@ -14,19 +14,19 @@
             <ul class="list-group">
               <li class="list-group-item">
                 <i class="far fa-calendar-alt mr-2"></i>Release Date
-                <span class="badge badge-light-primary">{{movie?.releaseDate}}</span>
+                <span class="badge badge-pill badge-light-primary">{{movie?.releaseDate}}</span>
               </li>
               <li class="list-group-item">
                 <i class="fas fa-hourglass-half mr-2"></i>Run Time
-                <span class="badge badge-light-primary">{{movie?.runTime}} m</span>
+                <span class="badge badge-pill badge-light-primary">{{movie?.runTime}} m</span>
               </li>
               <li class="list-group-item">
                 <i class="far fa-money-bill-alt"></i> Box Office
-                <span class="badge badge-light-primary"> {{movie?.revenue | currency }}</span>
+                <span class="badge badge-pill badge-pill badge-light-primary"> {{movie?.revenue | currency }}</span>
               </li>
               <li class="list-group-item">
                 <i class="fas fa-dollar-sign mr-2"></i> Budget
-                <span class="badge badge-light-primary"> {{movie?.budget | currency}}</span>
+                <span class="badge badge-pill badge-light-primary"> {{movie?.budget | currency}}</span>
               </li>
               <li *ngIf="movie?.homepage" class="list-group-item">
                 <i class="fas fa-share-square mr-2"></i>Home Page
@@ -114,7 +114,6 @@
                   <a href="#" [routerLink]="['/person/', d?.id ]" class="primary-anchor"> {{d.name}}</a>
                 </ng-container>
               </h6>
-
             </div>
 
             <div class="mt-3">
