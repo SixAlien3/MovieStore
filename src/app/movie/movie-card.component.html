@@ -4,13 +4,21 @@
       <div class="card small-card mr-5 mb-4">
         <div class="row">
           <div class="col-5 small-image">
-            <img src={{movie.posterUrl}} class="small-image">
+            <a [routerLink]="['/movie/', movie.externalId ]">
+              <img src={{movie.posterUrl}} class="small-image">
+            </a>
           </div>
           <div class="col-7 ">
             <div class="card-block mt-2">
               <h4 class="card-title font-weight-bold text-light">
-                <span class="badge badge-warning"> {{movie?.averageVote}} </span> {{movie?.title}}</h4>
-              <p class="card-text small-text"> {{movie?.overview}} </p>
+                <span class="badge badge-warning small-text text-dark"> {{movie?.averageVote}} </span> {{movie?.title}}</h4>
+              <p class="card-text small-text">
+                <span *ngIf="movie.overview.length < 320; else summaryOverview">{{movie?.overview}}</span>
+                <ng-template #summaryOverview>
+                  {{movie?.overview | summary:320 }}
+                </ng-template>
+
+              </p>
               <!-- <a href="#" class="btn btn-primary">show More</a> -->
             </div>
           </div>

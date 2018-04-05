@@ -364,6 +364,11 @@ body {
   background-color: transparent;
 }
 
+.main-movie-card {
+  border: none;
+  background-color: transparent;
+}
+
 .card-cast:hover {
   transform: scale(1.05);
   transition: transform .3s, -webkit-transform .3s;
@@ -449,16 +454,23 @@ body {
 
 .movie-card-img {}
 
-.small-card{
+.small-card {
   width: 32rem;
   background-color: var(--color-light-dark-black);
   border: none;
   border-radius: .5rem;
 }
+
 .small-image {
   width: 12rem;
 }
-.small-text{
+
+.small-image:hover {
+  transform: scale(1.03);
+  transition: transform .3s, -webkit-transform .3s
+}
+
+.small-text {
   font-size: .85rem;
   color: var(--color-grey--dark--3);
 }
