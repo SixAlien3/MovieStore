@@ -6,7 +6,6 @@
           <div class="card card-cast">
             <img class="card-img-top" src={{movie?.posterUrl}} alt="Card image">
           </div>
-
         </div>
         <div class="row ">
           <div class="col">
@@ -15,6 +14,10 @@
               <li class="list-group-item">
                 <i class="far fa-calendar-alt mr-2"></i>Release Date
                 <span class="badge badge-pill badge-light-primary">{{movie?.releaseDate}}</span>
+              </li>
+              <li class="list-group-item">
+                <i class="far fa-flag mr-2"></i>Status
+                <span class="badge badge-pill badge-light-primary">{{movie?.status}}</span>
               </li>
               <li class="list-group-item">
                 <i class="fas fa-hourglass-half mr-2"></i>Run Time
@@ -55,7 +58,7 @@
           </div>
           <div class="col-12 mt-4">
             <h3>
-              <span class="badge badge-warning">
+              <span *ngIf="movie?.averageVote > 0" class="badge badge-warning">
                 {{movie?.averageVote}}
               </span>
             </h3>

@@ -16,6 +16,7 @@ export class Movie {
     backdropUrl: string;
     externalId: number;
     runTime: number;
+    status: string;
     genres: Genre[];
     trailers: Trailer[];
 }
