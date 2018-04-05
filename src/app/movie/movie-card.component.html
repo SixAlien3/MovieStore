@@ -1,47 +1,4 @@
 <div class="container">
-  <!-- <div class="row">
-    <ng-container *ngFor="let movie of movies let i = index">
-      <div class="card movie-card col-4">
-        <div class="card-header movie-card-header">
-          <a [routerLink]="['/movie/', movie.externalId ]">
-            <img class="card-img movie-card-img" src={{movie.posterUrl}} alt="Card image">
-          </a>
-
-        </div>
-        <div class="card-body">
-          <h3 class="card-title movie-card-title">{{movie.title}}
-            <span class="label-year border-orange-red">
-              {{movie.releaseDate | date:'yyyy'}}
-
-            </span>
-          </h3>
-          <div class="container">
-            <div class="row">
-              <div class="col-3 metadata">
-                <h4>
-                  <span class="badge badge-warning"> {{movie.averageVote}}</span>
-                </h4>
-              </div>
-              <div class="col metadata">
-                <ng-container *ngFor="let g of movie.genres">
-                  <a href="#" [routerLink]="['/genre/', g.id ]" class="badge badge-pill badge-light-primary"> {{g.name}}</a>
-                </ng-container>
-              </div>
-            </div>
-          </div>
-          <h5 class="mt-4">
-            {{movie.tagline }}
-          </h5>
-          <a class="trailer-preview" href="{{movie.imdbId}}" appAnchorHref [attr.data-tmdbid]="movie.externalId" target="new">
-            <i [ngClass]="{'fab fa-imdb':movie.imdbId, 'fa fa-play': movie.imdbId == null }" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-
-    </ng-container>
-
-  </div> -->
-
   <div class="row">
     <ng-container *ngFor="let movie of movies let i = index">
       <div class="card small-card mr-5 mb-4">
@@ -52,8 +9,8 @@
           <div class="col-7 ">
             <div class="card-block mt-2">
               <h4 class="card-title font-weight-bold text-light">
-                <span class="badge badge-warning"> {{movie.averageVote}} </span> {{movie.title}}</h4>
-              <p class="card-text small-text"> {{movie.overview}} </p>
+                <span class="badge badge-warning"> {{movie?.averageVote}} </span> {{movie?.title}}</h4>
+              <p class="card-text small-text"> {{movie?.overview}} </p>
               <!-- <a href="#" class="btn btn-primary">show More</a> -->
             </div>
           </div>

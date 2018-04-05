@@ -450,7 +450,7 @@ body {
 .movie-card-img {}
 
 .small-card{
-  width: 30rem;
+  width: 32rem;
   background-color: var(--color-light-dark-black);
   border: none;
   border-radius: .5rem;
@@ -460,5 +460,5 @@ body {
 }
 .small-text{
   font-size: .85rem;
-  color: var(--color-grey--light--4);
+  color: var(--color-grey--dark--3);
 }
