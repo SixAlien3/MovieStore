@@ -1,15 +1,15 @@
 <div class="container">
-  <div class="row">
+  <!-- <div class="row">
     <ng-container *ngFor="let movie of movies let i = index">
-      <div class="card col-4">
-        <div class="card-header">
+      <div class="card movie-card col-4">
+        <div class="card-header movie-card-header">
           <a [routerLink]="['/movie/', movie.externalId ]">
-            <img class="card-img" src={{movie.posterUrl}} alt="Card image">
+            <img class="card-img movie-card-img" src={{movie.posterUrl}} alt="Card image">
           </a>
 
         </div>
         <div class="card-body">
-          <h3 class="card-title">{{movie.title}}
+          <h3 class="card-title movie-card-title">{{movie.title}}
             <span class="label-year border-orange-red">
               {{movie.releaseDate | date:'yyyy'}}
 
@@ -18,9 +18,8 @@
           <div class="container">
             <div class="row">
               <div class="col-3 metadata">
-                <!-- <i class="fa fa-star" aria-hidden="true"></i> -->
                 <h4>
-                  <span class="badge badge-secondary"> {{movie.averageVote}}</span>
+                  <span class="badge badge-warning"> {{movie.averageVote}}</span>
                 </h4>
               </div>
               <div class="col metadata">
@@ -41,5 +40,26 @@
 
     </ng-container>
 
+  </div> -->
+
+  <div class="row">
+    <ng-container *ngFor="let movie of movies let i = index">
+      <div class="card small-card mr-5 mb-4">
+        <div class="row">
+          <div class="col-5 small-image">
+            <img src={{movie.posterUrl}} class="small-image">
+          </div>
+          <div class="col-7 ">
+            <div class="card-block mt-2">
+              <h4 class="card-title font-weight-bold text-light">
+                <span class="badge badge-warning"> {{movie.averageVote}} </span> {{movie.title}}</h4>
+              <p class="card-text small-text"> {{movie.overview}} </p>
+              <!-- <a href="#" class="btn btn-primary">show More</a> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </ng-container>
   </div>
 </div>
