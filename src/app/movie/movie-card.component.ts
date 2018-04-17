@@ -10,13 +10,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieCardComponent implements OnInit {
 
+
+
   // genreId: number;
   movies: Movie[];
   gid: number;
   @Input('genreId') genreId: number;
   @Input('searchTerm') searchTerm: string;
   urlsegmant: string;
-  constructor(private movieService: MovieService, private route: ActivatedRoute) { }
+  constructor(private movieService: MovieService, private route: ActivatedRoute) { 
+
+  }
 
   ngOnInit() {
     this.route.paramMap.subscribe(
