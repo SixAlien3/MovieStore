@@ -16,10 +16,11 @@ export class HomeComponent implements OnInit {
 
   @ViewChild(NgbTabset) set content(content: ViewContainerRef) {
     this.tabSet = content;
-  };
+  }
 
   constructor(private movieService: MovieService) { }
 
+  // tslint:disable-next-line:use-life-cycle-interface
   ngAfterViewInit() {
     // console.log('Tab Initialized');
     // console.log(this.tabSet);
@@ -43,7 +44,7 @@ export class HomeComponent implements OnInit {
     // console.log(tab.activeId);
 
     switch (tab.nextId) {
-      case "comingSoontab": {
+      case 'comingSoontab': {
         this.movieService.getUpComingMovies()
           .subscribe(
             m => {
@@ -52,7 +53,7 @@ export class HomeComponent implements OnInit {
           );
         break;
       }
-      case "newTrailerstab": {
+      case 'newTrailerstab': {
         this.movieService.getNowPlayingMovies()
           .subscribe(
             m => {
@@ -61,7 +62,7 @@ export class HomeComponent implements OnInit {
           );
         break;
       }
-      case "topRatedtab": {
+      case 'topRatedtab': {
         this.movieService.getTopMovies()
           .subscribe(
             m => {
@@ -70,7 +71,7 @@ export class HomeComponent implements OnInit {
           );
         break;
       }
-      case "populartab": {
+      case 'populartab': {
         this.movieService.getMostPopularMovies()
           .subscribe(
             m => {
@@ -79,7 +80,7 @@ export class HomeComponent implements OnInit {
           );
         break;
       }
-      case "theatertab": {
+      case 'theatertab': {
         this.movieService.getNowPlayingMovies()
           .subscribe(
             m => {
@@ -89,7 +90,7 @@ export class HomeComponent implements OnInit {
         break;
       }
       default: {
-        console.log("theatertab");
+        console.log('theatertab');
         break;
       }
     }
@@ -100,7 +101,7 @@ export class HomeComponent implements OnInit {
     this.movieService.getNowPlayingMovies()
       .subscribe(
         m => {
-          this.movies = m
+          this.movies = m;
           // this.movies2 = m.slice(6, 12);
         }
       );
