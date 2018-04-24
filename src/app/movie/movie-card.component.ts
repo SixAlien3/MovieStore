@@ -18,7 +18,7 @@ export class MovieCardComponent implements OnInit {
   @Input('genreId') genreId: number;
   @Input('searchTerm') searchTerm: string;
   urlsegmant: string;
-  constructor(private movieService: MovieService, private route: ActivatedRoute) { 
+  constructor(private movieService: MovieService, private route: ActivatedRoute) {
 
   }
 
