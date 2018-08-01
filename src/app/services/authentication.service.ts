@@ -1,14 +1,16 @@
-import { Injectable } from '@angular/core';
+
+// tslint:disable-next-line:import-blacklist
+import {throwError as observableThrowError,  Observable } from 'rxjs';
 import { JwtService } from './jwt.service';
 import { ApiService } from './api.service';
 import { Login } from '../shared/models/login';
-import { Observable } from 'rxjs/Observable';
-import { HttpHeaders } from '@angular/common/http';
 import { BadInputError } from '../shared/utils/bad.input.error';
 import { NotFoundError } from '../shared/utils/not.found.error';
 import { AppError } from '../shared/utils/app.error';
 import { User } from '../shared/models/user';
 import { JwtHelper, tokenNotExpired } from 'angular2-jwt';
+import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class AuthenticationService {
@@ -17,16 +19,16 @@ export class AuthenticationService {
 
   }
   user: User;
-  login(userLogin: Login): Observable<string> {
+  login(userLogin: Login): Observable<boolean> {
     return this.apiService.create('/token', userLogin)
-      .map(response => {
+     .pipe(map(response => {
         if (response) {
           this.jwtService.saveToken(response);
           return true;
         }
         return false;
-      })
-      .catch(this.handleError);
+      }));
+
   }
 
   logout() {
@@ -60,13 +62,13 @@ export class AuthenticationService {
 
   private handleError(error: Response) {
     if (error.status === 400) {
-      return Observable.throw(new BadInputError(error.json()));
+      return observableThrowError(new BadInputError(error.json()));
     }
 
     if (error.status === 404) {
-      return Observable.throw(new NotFoundError());
+      return observableThrowError(new NotFoundError());
     }
 
-    return Observable.throw(new AppError(error));
+    return observableThrowError(new AppError(error));
   }
 }

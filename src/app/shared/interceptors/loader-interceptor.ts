@@ -1,8 +1,8 @@
 import { Injectable, Injector } from '@angular/core';
 import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpResponse } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { NgProgress } from '@ngx-progressbar/core';
-import 'rxjs/add/operator/do';
+
 
 @Injectable()
 export class LoaderInterceptor implements HttpInterceptor {

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Movie } from '../shared/models/movie';
 import { Trailer } from '../shared/models/trailer';
-import 'rxjs/add/observable/forkJoin';
 import { Credits } from '../shared/models/credits';
+import { forkJoin } from 'rxjs';
 
 @Injectable()
 export class MovieService {
@@ -32,7 +32,7 @@ export class MovieService {
 
   }
   getMovieandDetailsByTmdbId(id: number) {
-    return Observable.forkJoin(
+    return forkJoin(
       this.apiService.getOne(`${'/movies/details/'}`, id)
     );
   }

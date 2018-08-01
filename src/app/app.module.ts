@@ -4,8 +4,7 @@ import { ApiService } from './services/api.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -76,7 +75,6 @@ import { PeopleComponent } from './people/people.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    HttpModule,
     NgProgressModule.forRoot(),
     NgbModule.forRoot(),
     RouterModule.forRoot([

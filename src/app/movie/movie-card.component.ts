@@ -10,9 +10,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieCardComponent implements OnInit {
 
-
-
-  // genreId: number;
   movies: Movie[];
   gid: number;
   @Input('genreId') genreId: number;
