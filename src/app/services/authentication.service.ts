@@ -8,7 +8,7 @@ import { BadInputError } from '../shared/utils/bad.input.error';
 import { NotFoundError } from '../shared/utils/not.found.error';
 import { AppError } from '../shared/utils/app.error';
 import { User } from '../shared/models/user';
-import { JwtHelper, tokenNotExpired } from 'angular2-jwt';
+import { JwtHelperService } from '@auth0/angular-jwt';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 
@@ -55,7 +55,7 @@ export class AuthenticationService {
     if (!token) {
       return null;
     }
-    const decodedToken = new JwtHelper().decodeToken(token);
+    const decodedToken = new JwtHelperService().decodeToken(token);
     this.user = decodedToken;
     return this.user;
   }
