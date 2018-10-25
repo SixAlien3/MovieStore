@@ -12,7 +12,12 @@ export class MovieService {
   constructor(private apiService: ApiService) { }
 
   getNowPlayingMovies(): Observable<Movie[]> {
-    return this.apiService.getAll('/movies/nowplaying');
+    const myMap = new Map([
+      ['company', 'google,microsoft|in '],
+      ['client', 'time warner'],
+      ['category', 'c#'],
+    ]);
+    return this.apiService.getAll('/movies/nowplaying', myMap);
   }
   getUpComingMovies(): Observable<Movie[]> {
     return this.apiService.getAll('/movies/upcoming');

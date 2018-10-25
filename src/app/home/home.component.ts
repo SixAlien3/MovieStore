@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
       .subscribe(
         m => {
           this.tabMovies = m;
-          console.log(this.movies);
+      //    console.log(this.movies);
         }
       );
   }
